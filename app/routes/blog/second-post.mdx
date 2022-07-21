@@ -1,0 +1,25 @@
+---
+title: Second Blog Post Super Long Title Test Test Test
+date: 2022-07-22
+meta:
+  title: Second Blog Post Super Long Title Test Test Test
+  description: This is my description for blog post number 2. I needed something longer so I wrote some BS description. This is my description for blog post number 2. I needed something longer so I wrote some BS description. This is my description for blog post number 2. I needed something longer so I wrote some BS description.
+  date: 2022-07-22
+---
+
+import { format } from "date-fns";
+
+
+<p style={{ color: '#969292' }}>{format(meta.date, "LLLL d',' y")}</p>
+# {meta.title}
+
+I am writing my post in MDX it looks like this blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah!
+
+```js
+var React = require("react")
+var Markdown = require("react-markdown")
+React.render(
+  <Markdown source="# Your markdown here" />,
+  document.getElementById("content")
+)
+```

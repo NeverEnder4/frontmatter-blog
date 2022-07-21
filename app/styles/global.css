@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #364f6b;
+  --color-off-white: #fafafa;
+  --color-white: #ffffff;
+  --color-black: #333333;
+  --color-gray: #969292;
+  --color-gray-dark: #666666;
+  --color-gray-light: rgba(190, 190, 190, 0.5);
+
+  --font-body: -apple-system, "Segoe UI", Helvetica Neue, Helvetica, Roboto,
+    Arial, sans-serif, system-ui;
+  --font-read: "Bitter", var(--font-body);
+  --font-display: "Abril Fatface", var(--font-body);
+
+  --font-size-heading: 2.25rem;
+  --font-size-body: 1.25rem;
+  --font-size-logo: 3.5rem;
+
+  --line-height-body: 1.75;
+
+  --spacing-xs: 2px;
+  --spacing-sm: 4px;
+  --spacing-base: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+
+  --padding-container: 36px 24px;
+}
+
+@font-face {
+  font-family: "Abril Fatface";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/AbrilFatface/AbrilFatface-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Bitter/static/Bitter-Medium.ttf") format("truetype");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-off-white);
+}
+
+a:focus::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 50%;
+  left: 50%;
+  padding: var(--spacing-sm);
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-image: linear-gradient(
+      45deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+    )
+    1;
+  border-width: 2px;
+  border-style: dashed;
+}
+a {
+  outline: none;
+  position: relative;
+}
+
+.border-gray {
+  border-color: ;
+}
+
+.layout .header .content .external-link svg {
+  width: 36px;
+  height: auto;
+  fill: rgb(191, 191, 191);
+}
+
+.layout .header .content .external-link img {
+  width: 36px;
+  height: auto;
+}
+
+.layout .header .content .external-link:hover svg {
+  fill: rgb(160, 160, 160);
+}
+
+.layout .header .content .external-link:hover img {
+  opacity: 0.5;
+}
+
+.layout .header .content p {
+  color: var(--color-gray);
+}
+
+.layout .header .content .logo-link {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-lg);
+}
+
+.layout .header .content h1 {
+  font-family: var(--font-display);
+  font-size: var(--font-size-logo);
+  line-height: 0.8;
+}
+
+.layout .header .content img {
+  width: 3.8rem;
+}
+
+.layout .header .content .upper-content {
+  margin-bottom: 0;
+}
+
+.layout .header .content {
+  max-width: 600px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.layout .content-container {
+  max-width: 600px;
+}
+
+.layout .main {
+  padding: var(--padding-container);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.layout .bio + .footer {
+  margin-top: 0;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.post p {
+  font-size: var(--font-size-body);
+}
+
+.post .date {
+  font-size: initial;
+  color: var(--color-gray);
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--color-gray);
+  border-top: 1px solid var(--color-gray-light);
+  margin-top: auto;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  padding: 36px 0;
+  text-align: center;
+}
+.footer .container a {
+  color: var(--color-gray-dark);
+}
+
+.post-bio {
+  border-top: 1px solid var(--color-gray-light);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.post-bio .bio {
+  padding: 0;
+  text-align: left;
+}
+
+.post-bio .container {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  flex-direction: row;
+}
+
+.post-bio .container .author-image {
+  width: 80px;
+  height: auto;
+  display: block;
+  margin-right: var(--spacing-xl);
+}
+
+.post-bio .container .author-name {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-base);
+}
+
+.post-bio .container .author-description {
+  color: var(--color-gray);
+  line-height: var(--line-height-body);
+}
+
+.post-bio .container .author-description strong {
+  color: var(--color-gray-dark);
+}

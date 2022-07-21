@@ -1,0 +1,35 @@
+.post-list-item {
+  font-family: var(--font-body);
+}
+
+.post-list-item:not(:last-of-type) {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.post-list-item .meta-title {
+  font-size: var(--font-size-heading);
+  font-weight: 800;
+  line-height: 1.11;
+  margin-bottom: var(--spacing-lg);
+}
+
+.post-list-item .meta-date {
+  display: inline-block;
+  color: var(--color-gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.post-list-item .meta-description {
+  line-height: var(--line-height-body);
+  color: var(--color-gray);
+  font-size: var(--font-size-body);
+  /* font-family: var(--font-read); */
+}
+
+.post-list-item a {
+  text-decoration: none;
+}
+
+.post-list-item:hover .meta-title {
+  text-decoration: underline;
+}
